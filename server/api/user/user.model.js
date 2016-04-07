@@ -6,6 +6,7 @@ import {Schema} from 'mongoose';
 
 var UserSchema = new Schema({
   name: String,
+  tacks:[{  type: Schema.Types.ObjectId, ref: 'Tack' }]
   email: {
     type: String,
     lowercase: true
