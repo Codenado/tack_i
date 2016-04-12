@@ -6,7 +6,7 @@ import {Schema} from 'mongoose';
 
 var UserSchema = new Schema({
   name: String,
-  tacks:[{  type: Schema.Types.ObjectId, ref: 'Tack' }]
+  tacks:[{ type: Schema.Types.ObjectId, ref: 'Tack' }],
   email: {
     type: String,
     lowercase: true
@@ -144,6 +144,10 @@ UserSchema.methods = {
         callback(null, false);
       }
     });
+  },
+
+  addTack(tack){
+    this.tacks.push(tack)
   },
 
   /**

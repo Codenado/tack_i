@@ -18,10 +18,11 @@ class MainController {
     });
   }
 
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
+  addTack() {
+    console.log('/?sdfdsfsdfssdfs')
+    if (this.newTack) {
+      this.$http.post('/api/tack', this.newTack);
+      this.newTack = {};
     }
   }
 
